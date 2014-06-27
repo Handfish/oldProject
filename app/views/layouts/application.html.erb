@@ -10,8 +10,12 @@
 <body>
 
 	<%= render 'layouts/header' %>
-	<%= render 'pages/welcome' %>
 
+	<% if !user_signed_in? %>
+	<%= render 'pages/welcome' %>
+	<% else %>
+    <% end %>
+	
 	<div class="container">
 		<% flash.each do |name, msg| %>
      		<%= content_tag(:div, msg, class: "alert alert-info") %>
