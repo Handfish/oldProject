@@ -1,0 +1,54 @@
+@import url(http://fonts.googleapis.com/css?family=Exo:900,800,400);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
+
+$body-bg:		#E4ECF7;
+$link-color:    #c0392b;
+
+$jumbotron-bg:					#F5F5F5;
+$font-family-sans-serif:		"Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$navbar-height:					45px;
+$navbar-default-bg:				#CDDAEC;
+$navbar-default-link-color:		#4D4D4D;
+$navbar-default-brand-color:	black;
+$brand-primary:					#4D4D4D;
+$btn-primary-bg:				#c0392b;
+$btn-default-bg:				#D9D9D9;
+
+
+$navbar-default-link-hover-color:	black;
+$navbar-default-brand-hover-color:	lighten($navbar-default-brand-color, 30.5%);
+
+
+//Good colors #2E2E2E;
+
+@import 'bootstrap';
+
+.center {
+	text-align: center;
+}
+
+.jumbotron {
+    padding: 0.5em 0.6em;
+    h1 {
+        font-size: 3em;
+    }
+    p {
+    	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 1.2em;
+        .btn {
+            padding: 0.5em;
+        }
+    }
+}
+
+.navbar-nav {
+	font-family: "Exo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.navbar-brand {
+	font-family: "Exo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+}
+
