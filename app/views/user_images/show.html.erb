@@ -1,21 +1,22 @@
-<%= form_for(@pin) do |f| %>
-  <% if @pin.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@pin.errors.count, "error") %> prohibited this pin from being saved:</h2>
+<p id="notice"><%= notice %></p>
 
-      <ul>
-      <% @pin.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<p>
+  <strong>Description:</strong>
+  <%= @user_image.description %>
+</p>
 
-  <div class="form-group">
-    <%= f.label :description %>
-    <%= f.text_field :description, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.submit class: "btn btn-primary" %>
-  </div>
+<p>
+  <strong>Previous:</strong>
+  <%= @user_image.previous %>
+</p>
+
+<p>
+  <strong>Next:</strong>
+  <%= @user_image.next %>
+</p>
+
+<% if @user_image.user == current_user %>
+	<%= link_to 'Edit', edit_user_image_path(@user_image) %> |
 <% end %>
+
+<%= link_to 'Back', user_images_path %>

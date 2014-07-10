@@ -16,9 +16,12 @@
         <td><%= user_image.description %></td>
         <td><%= user_image.previous %></td>
         <td><%= user_image.next %></td>
+        <td><%= user_image.user.name if user_image.user %></td>
         <td><%= link_to 'Show', user_image %></td>
-        <td><%= link_to 'Edit', edit_user_image_path(user_image) %></td>
-        <td><%= link_to 'Destroy', user_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if user_image.user == current_user %>
+          <td><%= link_to 'Edit', edit_user_image_path(user_image) %></td>
+          <td><%= link_to 'Destroy', user_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +29,6 @@
 
 <br>
 
-<%= link_to 'New User image', new_user_image_path %>
+<% if user_signed_in? %>
+  <%= link_to 'New User image', new_user_image_path %>
+<% end %>

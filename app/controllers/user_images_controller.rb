@@ -1,5 +1,7 @@
 class UserImagesController < ApplicationController
   before_action :set_user_image, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   def index
     @user_images = UserImage.all
@@ -16,7 +18,7 @@ class UserImagesController < ApplicationController
   end
 
   def create
-    @user_image = UserImage.new(user_image_params)
+    @user_image = current_user.user_images.build(user_image_params)
 
       if @user_image.save
         redirect_to @user_image, notice: 'User image was successfully created.' 
@@ -42,6 +44,11 @@ class UserImagesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_user_image
       @user_image = UserImage.find(params[:id])
+    end
+
+    def correct_user
+      @user_image = current_user.user_images.find_by(id: params[:id])
+      redirect_to user_images_path, notice: "Not authorized to edit this user_image" if @user_image.nil?
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
