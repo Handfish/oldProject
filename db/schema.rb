@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140627232426) do
+ActiveRecord::Schema.define(version: 20140710173100) do
+
+  create_table "user_images", force: true do |t|
+    t.string   "description"
+    t.integer  "previous"
+    t.integer  "next"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  add_index "user_images", ["user_id"], name: "index_user_images_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
