@@ -1,19 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag @user_image.image.url %>
+
 <p>
   <strong>Description:</strong>
   <%= @user_image.description %>
 </p>
 
-<p>
-  <strong>Previous:</strong>
-  <%= @user_image.previous %>
-</p>
-
-<p>
-  <strong>Next:</strong>
-  <%= @user_image.next %>
-</p>
 
 <% if @user_image.user == current_user %>
 	<%= link_to 'Edit', edit_user_image_path(@user_image) %> |

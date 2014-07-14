@@ -53,6 +53,6 @@ class UserImagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_image_params
-      params.require(:user_image).permit(:description, :previous, :next)
+      params.require(:user_image).permit(:description, :image)
     end
 end
