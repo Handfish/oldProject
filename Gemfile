@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.1.1'
+gem 'rails', '4.1.4'
 gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
@@ -9,6 +9,7 @@ gem 'bootstrap-sass'
 gem 'devise', '~> 3.2.4'
 
 # For images
+gem 'geocoder'
 gem 'paperclip', github: 'thoughtbot/paperclip'
 
 gem 'jquery-rails'

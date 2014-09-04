@@ -1,19 +1,22 @@
 @import url(http://fonts.googleapis.com/css?family=Exo:900,800,400);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(http://fonts.googleapis.com/css?family=IM+Fell+Great+Primer:400,400italic);
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
+
 
 
 $body-bg:		white;
 $link-color:    #c0392b;
 
-$jumbotron-bg:					#EBF1F9;
+$jumbotron-bg:			     		#EBF1F9;
 $font-family-sans-serif:		"Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$navbar-height:					45px;
-$navbar-default-bg:				#CDDAEC;
+$navbar-height:				     	45px;
+$navbar-default-bg:			  	#CDDAEC;
 $navbar-default-link-color:		#4D4D4D;
 $navbar-default-brand-color:	black;
-$brand-primary:					#4D4D4D;
-$btn-primary-bg:				#c0392b;
-$btn-default-bg:				#D9D9D9;
+$brand-primary:				    	#4D4D4D;
+$btn-primary-bg:			    	#c0392b;
+$btn-default-bg:		    		#D9D9D9;
 
 
 $navbar-default-link-hover-color:	black;
@@ -29,6 +32,7 @@ $navbar-default-brand-hover-color:	lighten($navbar-default-brand-color, 30.5%);
 }
 
 .jumbotron {
+    margin-top: 10px;
     padding: 0.5em 0.6em;
     h1 {
         font-size: 3em;
@@ -42,13 +46,247 @@ $navbar-default-brand-hover-color:	lighten($navbar-default-brand-color, 30.5%);
     }
 }
 
+
+
 .navbar-nav {
 	font-family: "Exo", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+
 .navbar-brand {
 	font-family: "Exo", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: bold;
-	font-size: 24px;
+	font-size: 30px;
+  padding-left: 11px;
+  padding-top: 15px;
 }
+
+.navbar .container { min-height: 28px; }
+
+.navbar {
+    min-height: 28px;
+    margin-bottom: 0px;
+}
+
+
+
+
+
+
+//Second navbar code
+.navbar-inverse{
+    margin-bottom: 10px;
+    border-radius: 0;
+    min-height:40px !important;
+    height: 28px;
+
+}
+
+@media(max-width:998px)
+{
+  .navbar-inverse .container{
+    width:auto;
+  }
+
+  .navbar .container{
+    width:auto;
+  }
+}
+
+@media(max-width:768px)
+{   
+  .navbar-inverse {
+    max-height:none;
+    height:auto;
+  }
+  .navbar-inverse .container .container-fluid  .navbar-brand{
+    padding: 8px 8px;font-size: 16px;line-height: 18px; 
+    max-height:none;
+    height:auto;
+  }
+  .navbar-inverse .container .container-fluid  .navbar-nav > li > a {
+    max-height:none;
+    height:auto;
+ } 
+}
+
+
+.navbar-inverse .navbar-brand{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+.navbar-inverse .container .container-fluid  { min-height:28px; } 
+.navbar-inverse .container .container-fluid  .navbar-brand{ padding: 8px 8px;font-size: 16px;line-height: 18px; 
+   min-height:40px !important;
+   height: 40px !important;
+} 
+.navbar-inverse .container .container-fluid  .navbar-nav > li > a {  padding-top: 7px; padding-bottom: 7px; line-height: 20px;
+   min-height:38px !important;
+   height: 28px !important;
+ } 
+.navbar-inverse .container .container-fluid  { min-height:30px; } 
+.navbar-inverse .container .container-fluid .navbar-brand{ padding: 12px 12px;font-size: 16px;line-height: 18px; } 
+.navbar-inverse .container .container-fluid .navbar-nav > li > a {  padding-top: 12px; padding-bottom: 12px; line-height: 20px; }
+.navbar-inverse .container .container-fluid .navbar-nav .active { padding-bottom: 12px; line-height: 20px; }
+.navbar-inverse .container .container-fluid .dropdown { height:40px; line-height: 20px; }
+.navbar-inverse .container .container-fluid .navbar-form{ font-size: 16px;line-height: 18px; } 
+
+.smallInput input[type="text"] {
+   height: 24px;
+   font-size: 14px;
+   line-height: 24px;
+   width:140px;
+}
+
+.smallInput .btn {
+  padding: 0.2em;
+}
+
+
+/* 
+Custom CSS for...
+'Modern Business' HTML Theme by Start Bootstrap
+
+All Start Bootstrap themes are licensed under Apache 2.0. 
+For more info and more free Bootstrap 3 HTML themes, visit http://startbootstrap.com!
+*/
+
+
+
+
+/* Global Styles */
+
+//Profiles
+.inner {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    left: 4%;
+    h1 {
+        font-size: 6em;
+        letter-spacing:-5px;
+        color: white;
+        font-family:    "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+}
+
+/* Carousel base class */
+.carousel {
+  height: 380px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 380px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 435px;
+}
+
+.media-body > p
+{
+    text-indent:25px;
+}
+
+.media-body > h4
+{
+    font-weight: bold;
+}
+
+
+//Friend request buttons and/or icons
+.associativeActions
+{
+  margin-bottom: 10px;
+  height: 50px;
+}
+
+.associativeActions .btn
+{
+  float:right;
+  margin-left: 10px;
+}
+
+
+//Preview images
+.imagePreview
+{
+  float:left;
+  margin-right:12px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.imagePreview.last
+{
+  margin-right:0px;
+}
+
+//Journal Items
+.panel-info{
+  margin-top:14px;
+}
+
+.btn-custom {
+  background-color: hsl(214, 46%, 36%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#628dc5", endColorstr="#315686");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#628dc5), to(#315686));
+  background-image: -moz-linear-gradient(top, #628dc5, #315686);
+  background-image: -ms-linear-gradient(top, #628dc5, #315686);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #628dc5), color-stop(100%, #315686));
+  background-image: -webkit-linear-gradient(top, #628dc5, #315686);
+  background-image: -o-linear-gradient(top, #628dc5, #315686);
+  background-image: linear-gradient(#628dc5, #315686);
+  border-color: #315686 #315686 hsl(214, 46%, 30.5%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.36);
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn-custom.kilo {
+  background-color: hsl(233, 0%, 73%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fcfcfc", endColorstr="#bababa");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#fcfcfc), to(#bababa));
+  background-image: -moz-linear-gradient(top, #fcfcfc, #bababa);
+  background-image: -ms-linear-gradient(top, #fcfcfc, #bababa);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fcfcfc), color-stop(100%, #bababa));
+  background-image: -webkit-linear-gradient(top, #fcfcfc, #bababa);
+  background-image: -o-linear-gradient(top, #fcfcfc, #bababa);
+  background-image: linear-gradient(#fcfcfc, #bababa);
+  border-color: #bababa #bababa hsl(233, 0%, 66.5%);
+  color: #333 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.42);
+  -webkit-font-smoothing: antialiased;
+  margin-top: 4px;
+}
+
+.socialMedia{
+  margin-left: 16px;
+  float:left;
+}
+
+.quote > h1
+{
+  margin-top: 0px;
+  text-align:right;
+  float:right;
+  font-family: "IM Fell Great Primer", serif;
+  font-style: italic;
+}
+
 

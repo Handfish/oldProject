@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :user_images
+  resources :profile
 
   devise_for :users
   root "pages#home"

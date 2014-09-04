@@ -1,0 +1,208 @@
+<script type="text/javascript">
+$(document).ready(function() {      
+   $('.carousel').carousel('pause');
+});
+
+$(document).on('mouseleave', '.carousel', function() {
+
+    $(this).carousel('pause');
+});
+</script>
+
+<!-- Carousel
+    ================================================== -->
+
+<div class="row">
+   <div class="col-xs-12 col-sm-12 col-md-7">
+
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAFVVVQAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+             
+            </div>
+          </div>
+        </div>
+      </div>
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+          
+        </a>
+
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+            
+        </a>
+
+      <div class="inner">
+      <h1>
+
+        <% if user_signed_in? %>
+          <%= current_user.name %>
+        <% else %>
+        <% end %>
+      </h1>
+
+      </div>
+    </div><!-- /.carousel -->
+
+    <div class="associativeActions">
+       <button type="button" class="btn btn-custom"><%= image_tag '/images/friends2.png'%>  Associate</button>
+       <button type="button" class="btn btn-custom"><%= image_tag '/images/messaging.png'%> Message</button>
+       <button type="button" class="btn btn-custom kilo">Schedule</button>
+       <button type="button" class="btn btn-custom kilo"> Journal</button>
+
+    </div>
+
+    <div class="imagePreview" href="#myCarousel">
+      <img class="media-object" data-src="holder.js/120x120" alt="Generic placeholder image" data-target="#myCarousel" data-slide-to="0">
+    </div>
+
+    <div class="imagePreview" href="#myCarousel">
+      <img class="media-object" data-src="holder.js/120x120" alt="Generic placeholder image" data-target="#myCarousel" data-slide-to="1">
+    </div>
+
+    <div class="imagePreview" href="#myCarousel">
+      <img class="media-object" data-src="holder.js/120x120" alt="Generic placeholder image" data-target="#myCarousel" data-slide-to="2">
+    </div>
+
+    <div class="imagePreview" href="#myCarousel">
+      <img class="media-object" data-src="holder.js/120x120" alt="Generic placeholder image" data-target="#myCarousel" data-slide-to="3">
+    </div>
+
+    <div class="imagePreview last" href="#myCarousel">
+      <img class="media-object" data-src="holder.js/120x120" alt="Generic placeholder image" data-target="#myCarousel" data-slide-to="4">
+    </div>
+
+
+   </div><!-- /.col-xs-12 col-sm-12 col-md-7 -->
+
+
+   <div class="col-xs-12 col-sm-12 col-md-5">
+
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="active"><a href="#">Overview</a></li>
+      <li><a href="#">Personal Information</a></li>
+      <li><a href="#">Character</a></li>
+      <li><a href="#">Locations</a></li>
+    </ul>
+
+    <h3 id="media-default">Martial Artist / Dancer / Coder</h3>
+    <p>Presently following the 5x5 Stronglifts program, learning Capoeira, practicing breakdance footwork, building an 88 Ford Ranger and coding Lodex.</p>
+
+    <div class="bs-example">
+      <div class="media">
+        <a class="pull-left" href="#">
+          <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image">
+        </a>
+        <div class="media-body">
+          <h4 class="media-heading">Capoeira Maranhao</h4>
+          <p>Capoeira Maranhão was established in 2009  in New Brunswick, New Jersey by Professor Maranhão (Jose Carlos Silva). Born in Goiânia, Brazil, Professor Maranhão began training capoeira in the United States with Mestre Cigano of Grupo Liberdade de Capoeira. A few years after Mestre Cigano started teaching at the Rutgers Capoeira Club at Rutgers University in 1993, he asked Professor Maranhão to assist him in teaching the growing group.</p>
+        </div>
+      </div>
+      <div class="media">
+        <a class="pull-left" href="#">
+          <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image">
+        </a>
+        <div class="media-body">
+          <h4 class="media-heading">BBoy Student Organization of Rutgers</h4>
+          <p>The organization allows students interested in breakdancing to be a part of an interconnected system of people that practice, compete and learn the rhythmic patterns of steps to a dance music genre known as breakbeats.</p>
+        </div>
+      </div>
+      <div class="media">
+        <a class="pull-left" href="#">
+          <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image">
+        </a>
+        <div class="media-body">
+          <h4 class="media-heading">Ruby Web Development</h4>
+          <p>This is a group oriented towards learning to better your Ruby coding skills, clean up your web development practices and help each other create that which has been dreamed of.</p>
+        </div>
+      </div>
+    </div><!-- /.bs-example -->
+
+   </div>
+</div>
+
+
+
+
+
+<div class="row" >
+
+   <div class="col-xs-12 col-sm-12 col-md-4 ">
+   <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">Active Journal Items</h3>
+      </div>
+      <div class="panel-body">
+        <ul class="list-group">
+          <li class="list-group-item">Cras justo odio</li>
+          <li class="list-group-item">Dapibus ac facilisis in</li>
+          <li class="list-group-item">Morbi leo risus</li>
+          <li class="list-group-item">Porta ac consectetur ac</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+      </div>
+    </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-8">
+      <div id="recentActivity">
+        <h3>Recent Activity</h3>
+        <p>Presently following the 5x5 Stronglifts program, learning Capoeira, practicing breakdance footwork, building an 88 Ford Ranger and coding Lodex.</p>
+        <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
+        <p>Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+
+        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, </p>
+        <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="row">
+  <div class="col-xs-3 col-sm-3 col-md-3">
+    <div class="socialMedia">
+      <h4> Total interaction: 942 </h4>
+      <div class="imagePreview">
+          <%= image_tag '/images/facebook-3-32.png'%>
+        </div>
+
+      <div class="imagePreview">
+        <%= image_tag '/images/google-plus-3-32.png'%>
+      </div>
+
+      <div class="imagePreview">
+        <%= image_tag '/images/instagram-32.png'%>
+      </div>
+
+      <div class="imagePreview last">
+        <%= image_tag '/images/twitter-32.png'%>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-9 col-sm-9 col-md-9">
+    <div class="quote">
+      <h1>“To succeed in life, you need two things: ignorance and confidence.” ~Mark Twain </h1>
+    </div>
+  </div>
+</div>
