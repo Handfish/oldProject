@@ -9,8 +9,13 @@ gem 'bootstrap-sass'
 gem 'devise', '~> 3.2.4'
 
 # For images
-gem 'geocoder'
 gem 'paperclip', github: 'thoughtbot/paperclip'
+
+# Gems dealing with GPS and coordinate data
+gem 'geocoder', '~> 1.2.5'
+
+# For tag functionality
+gem 'acts-as-taggable-on', '~> 3.4.1'
 
 gem 'jquery-rails'
 gem 'turbolinks'

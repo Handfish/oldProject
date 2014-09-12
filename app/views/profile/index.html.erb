@@ -1,4 +1,6 @@
 <script type="text/javascript">
+
+
 $(document).ready(function() {      
    $('.carousel').carousel('pause');
 });
@@ -7,6 +9,12 @@ $(document).on('mouseleave', '.carousel', function() {
 
     $(this).carousel('pause');
 });
+
+$('#myTab a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+
 </script>
 
 <!-- Carousel
@@ -97,45 +105,59 @@ $(document).on('mouseleave', '.carousel', function() {
 
    <div class="col-xs-12 col-sm-12 col-md-5">
 
-    <ul class="nav nav-tabs" role="tablist">
-      <li class="active"><a href="#">Overview</a></li>
-      <li><a href="#">Personal Information</a></li>
-      <li><a href="#">Character</a></li>
-      <li><a href="#">Locations</a></li>
+    <ul class="nav nav-tabs" role="tablist" id="myTab">
+      <li class="active"><a href="#overview" role="tab" data-toggle="tab">Overview</a></li>
+      <li><a href="#personalInformation" role="tab" data-toggle="tab">Personal Information</a></li>
+      <li><a href="#character" role="tab" data-toggle="tab">Character</a></li>
+      <li><a href="#locations" role="tab" data-toggle="tab">Locations</a></li>
     </ul>
 
-    <h3 id="media-default">Martial Artist / Dancer / Coder</h3>
-    <p>Presently following the 5x5 Stronglifts program, learning Capoeira, practicing breakdance footwork, building an 88 Ford Ranger and coding Lodex.</p>
 
-    <div class="bs-example">
-      <div class="media">
-        <a class="pull-left" href="#">
-          <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image">
-        </a>
-        <div class="media-body">
-          <h4 class="media-heading">Capoeira Maranhao</h4>
-          <p>Capoeira Maranhão was established in 2009  in New Brunswick, New Jersey by Professor Maranhão (Jose Carlos Silva). Born in Goiânia, Brazil, Professor Maranhão began training capoeira in the United States with Mestre Cigano of Grupo Liberdade de Capoeira. A few years after Mestre Cigano started teaching at the Rutgers Capoeira Club at Rutgers University in 1993, he asked Professor Maranhão to assist him in teaching the growing group.</p>
-        </div>
-      </div>
-      <div class="media">
-        <a class="pull-left" href="#">
-          <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image">
-        </a>
-        <div class="media-body">
-          <h4 class="media-heading">BBoy Student Organization of Rutgers</h4>
-          <p>The organization allows students interested in breakdancing to be a part of an interconnected system of people that practice, compete and learn the rhythmic patterns of steps to a dance music genre known as breakbeats.</p>
-        </div>
-      </div>
-      <div class="media">
-        <a class="pull-left" href="#">
-          <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image">
-        </a>
-        <div class="media-body">
-          <h4 class="media-heading">Ruby Web Development</h4>
-          <p>This is a group oriented towards learning to better your Ruby coding skills, clean up your web development practices and help each other create that which has been dreamed of.</p>
-        </div>
-      </div>
-    </div><!-- /.bs-example -->
+    <div class="tab-content">
+
+      <div class="tab-pane active" id="overview">
+
+        <h3 id="media-default">Martial Artist / Dancer / Coder</h3>
+        <p>Presently following the 5x5 Stronglifts program, learning Capoeira, practicing breakdance footwork, building an 88 Ford Ranger and coding Lodex.</p>
+
+        <div class="bs-example">
+          <div class="media">
+            <a class="pull-left" href="#">
+              <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image">
+            </a>
+            <div class="media-body">
+              <h4 class="media-heading">Capoeira Maranhao</h4>
+              <p>Capoeira Maranhão was established in 2009  in New Brunswick, New Jersey by Professor Maranhão (Jose Carlos Silva). Born in Goiânia, Brazil, Professor Maranhão began training capoeira in the United States with Mestre Cigano of Grupo Liberdade de Capoeira. A few years after Mestre Cigano started teaching at the Rutgers Capoeira Club at Rutgers University in 1993, he asked Professor Maranhão to assist him in teaching the growing group.</p>
+            </div>
+          </div>
+          <div class="media">
+            <a class="pull-left" href="#">
+              <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image">
+            </a>
+            <div class="media-body">
+              <h4 class="media-heading">BBoy Student Organization of Rutgers</h4>
+              <p>The organization allows students interested in breakdancing to be a part of an interconnected system of people that practice, compete and learn the rhythmic patterns of steps to a dance music genre known as breakbeats.</p>
+            </div>
+          </div>
+          <div class="media">
+            <a class="pull-left" href="#">
+              <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image">
+            </a>
+            <div class="media-body">
+              <h4 class="media-heading">Ruby Web Development</h4>
+              <p>This is a group oriented towards learning to better your Ruby coding skills, clean up your web development practices and help each other create that which has been dreamed of.</p>
+            </div>
+          </div>
+        </div><!-- /.bs-example -->
+    </div>
+
+
+      <div class="tab-pane" id="personalInformation">...</div>
+      <div class="tab-pane" id="character">...</div>
+      <div class="tab-pane" id="locations">...</div>
+    </div>
+
+
 
    </div>
 </div>

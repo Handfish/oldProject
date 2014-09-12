@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :groups
+
   resources :user_images
   resources :profile
 
