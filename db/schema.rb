@@ -11,12 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140912152001) do
+ActiveRecord::Schema.define(version: 20140912153735) do
 
   create_table "groups", force: true do |t|
     t.string   "name"
     t.string   "description"
-    t.integer  "owner"
     t.boolean  "isPublic"
     t.string   "address"
     t.float    "latitude"
